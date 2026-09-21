@@ -94,12 +94,12 @@ df['audiCnt'] = df['audiCnt'].astype(int)
 df['audiAcc'] = df['audiAcc'].astype(int)
 df['scrnCnt'] = df['scrnCnt'].astype(int)
 
-# 순위 증감 화살표 적용 함수
+# 순위 증감 화살표 적용 함수 (이모지 통일)
 def format_rank_inten(val):
     if val > 0:
-        return f"🔺 {val}" # 양수면 빨간 위 화살표
+        return f"🔼 {val}" # 양수면 위 화살표
     elif val < 0:
-        return f"🔽 {abs(val)}" # 음수면 파란(기본) 아래 화살표와 절대값
+        return f"🔽 {abs(val)}" # 음수면 아래 화살표
     else:
         return "-" # 변동 없으면 줄표
 
